@@ -1,13 +1,12 @@
 CC = gcc
-CFLAGS = -Wall -Iinclude
-OBJ = obj
+CFLAGS = -Wall -Wextra -Werror
 
 SOURCES = main.c board.c ai.c game.c
-OUTPUT = tictactoe
+NAME = tictactoe
 
 all:
-	$(CC) $(CFLAGS) $(SOURCES) -o $(OUTPUT)
+	$(CC) $(CFLAGS) $(SOURCES) -o $(NAME)
 
 clean:
-	rm -f $(OUTPUT)
+	rm -f $(NAME)
 
